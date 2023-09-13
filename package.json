@@ -1,7 +1,7 @@
 {
-  "name": "gerrit-push",
-  "displayName": "Gerrit Push",
-  "description": "",
+  "name": "gerrit-push-tool",
+  "displayName": "Gerrit Push Tool",
+  "description": "基于gerrit push扩展了一下功能",
   "publisher": "sage",
   "repository": {
     "type": "git",
@@ -23,7 +23,7 @@
     "commands": [
       {
         "command": "gerrit.push",
-        "title": "Gerrit Push"
+        "title": "Gerrit Push Tool"
       }
     ]
   },
