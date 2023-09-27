@@ -19,8 +19,8 @@ async function mainGerrit(context: vscode.ExtensionContext) {
     branchs.push(value['name']);
   });
   const branch:any=await showBranchQuickPick(branchs);
- const reviewers:any= await showReviewersInput(context);
-  gitAPI("push", branch.label+reviewers,  repoId['id'],);
+ const reviewers:any= await showReviewersInput(context)||'';
+  gitAPI("push", `${branch.label}${reviewers||''}`,  repoId['id'],);
 }
 
 async function gitAPI(val: string, pushBranch: string = "", id: number = 0) {
